@@ -1,0 +1,945 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/delaram/ontologies/2022/3/AIRhealth#"
+     xml:base="http://www.semanticweb.org/delaram/ontologies/2022/3/AIRhealth"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/delaram/ontologies/2022/3/AIRhealth"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/AIRO#AIProvider -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#AIProvider">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Actor"/>
+        <rdfs:comment xml:lang="en">A natural or legal person, public authority, agency or other body that develops an AI system or that has an AI system developed with a view to placing it on the market or putting it into service under its own name or trademark, whether for payment or free of charge. [Source: AI Act]</rdfs:comment>
+        <rdfs:label xml:lang="en">AI Provider</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRO#AISubject -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#AISubject">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Actor"/>
+        <rdfs:comment xml:lang="en">An AI subject is an organization or entity that is impacted by an AI system, service or product.</rdfs:comment>
+        <rdfs:label xml:lang="en">AI Subject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRO#AISystem -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#AISystem">
+        <rdfs:comment xml:lang="en">Represents a software that is developed with one or more of the AI Approaches and can, for a given set of human-defined objectives, generate outputs such as content, predictions, recommendations, or decisions influencing the environments they interact with. [Source: AI Act, Art 3(1)]</rdfs:comment>
+        <rdfs:label xml:lang="en">AI System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRO#AITechnique -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#AITechnique">
+        <rdfs:comment xml:lang="en">Represents the main approaches and techniques used for development of AI systems.</rdfs:comment>
+        <rdfs:label xml:lang="en">AI Technique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRO#AIUser -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#AIUser">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Actor"/>
+        <rdfs:comment xml:lang="en">Any natural or legal person, public authority, agency or other body using an AI system under its authority. [Source: AI Act]</rdfs:comment>
+        <rdfs:label xml:lang="en">AI User</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRO#Actor -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#Actor"/>
+    
+
+
+    <!-- https://w3id.org/AIRO#AreaOfImpact -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#AreaOfImpact">
+        <rdfs:comment xml:lang="en">Represents areas that AI might have impact on.</rdfs:comment>
+        <rdfs:label xml:lang="en">Area Of Impact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRO#Consequence -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#Consequence">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Event"/>
+        <rdfs:comment xml:lang="en">Outcome of an event affecting objectives. [Source: ISO 31000, 3.6]</rdfs:comment>
+        <rdfs:label xml:lang="en">Consequence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRO#DataSet-RelatedRiskSource -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#DataSet-RelatedRiskSource">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#RiskSource"/>
+        <rdfs:label xml:lang="en">DataSet-Related Risk Source</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRO#Death -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#Death">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#WellbeingImpact"/>
+        <rdfs:comment xml:lang="en">Represents death of a person caused by AI.</rdfs:comment>
+        <rdfs:label xml:lang="en">Death</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRO#Event -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#Event"/>
+    
+
+
+    <!-- https://w3id.org/AIRO#Health -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#Health">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRhealth#Well-Being"/>
+        <rdfs:comment xml:lang="en">Represents health of a person.</rdfs:comment>
+        <rdfs:label xml:lang="en">Health</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRO#Impact -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#Impact">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Consequence"/>
+        <rdfs:comment xml:lang="en">Represents outcomes of a consequence on persons, groups, facilities, environment, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Impact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRO#Injury -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#Injury">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#WellbeingImpact"/>
+        <rdfs:comment xml:lang="en">Represents physical injuries caused by AI.</rdfs:comment>
+        <rdfs:label xml:lang="en">Physical Injury</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRO#PhysicalHealth -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#PhysicalHealth">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Health"/>
+        <rdfs:comment xml:lang="en">Represents physical health.</rdfs:comment>
+        <rdfs:label xml:lang="en">Physical Health</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRO#PsychologicalHarm -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#PsychologicalHarm">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#WellbeingImpact"/>
+        <rdfs:comment xml:lang="en">Represents psychological injuries caused by AI.</rdfs:comment>
+        <rdfs:label xml:lang="en">Psychological Harm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRO#PsychologicalHealth -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#PsychologicalHealth">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Health"/>
+        <rdfs:comment xml:lang="en">Represents psychological health.</rdfs:comment>
+        <rdfs:label xml:lang="en">Psychological Health</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRO#Purpose -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#Purpose">
+        <rdfs:comment xml:lang="en">Refers to the use for which an AI system is intended by the provider, including the specific context and conditions of use, as specified in the information supplied by the provider in the instructions for use, promotional or sales materials and statements, as well as in the technical documentation. [Source: AI Act, Art 3(12)]</rdfs:comment>
+        <rdfs:label xml:lang="en">Purpose</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRO#Risk -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#Risk">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Event"/>
+        <rdfs:comment xml:lang="en">Indicates a risk (of harm) associated with an AI system.</rdfs:comment>
+        <rdfs:label xml:lang="en">Risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRO#RiskSource -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#RiskSource">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Event"/>
+        <rdfs:comment xml:lang="en">Indicates an element that has the potential give rise to a risk.</rdfs:comment>
+        <rdfs:label xml:lang="en">Risk Source</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRO#TrainingDataRiskSource -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#TrainingDataRiskSource">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#DataSet-RelatedRiskSource"/>
+        <rdfs:label xml:lang="en">Training Data Risk Source</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRO#UnrepresentativeTrainingDataSet -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#UnrepresentativeTrainingDataSet">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#TrainingDataRiskSource"/>
+        <rdfs:label xml:lang="en">Unrepresentative Training Data Set</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRO#WellbeingImpact -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#WellbeingImpact">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Impact"/>
+        <rdfs:comment xml:lang="en">Represents impact of AI on persons&apos; health and wellbeing.</rdfs:comment>
+        <rdfs:label xml:lang="en">Well-being Impact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#AICapability -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#AICapability">
+        <rdfs:label xml:lang="en">AI Capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#Advertising -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#Advertising">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Purpose"/>
+        <rdfs:comment xml:lang="en">Refers to the use of health-related data or information for promoting consumer products.</rdfs:comment>
+        <rdfs:label xml:lang="en">Advertising</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#Algorithm-RelatedRiskSource -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#Algorithm-RelatedRiskSource">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#RiskSource"/>
+        <rdfs:label xml:lang="en">Algorithm-Related Risk Source</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#Autonomy -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#Autonomy">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRhealth#Well-Being"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#Bias -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#Bias">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Risk"/>
+        <rdfs:label xml:lang="en">Bias</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#Citizen -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#Citizen">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AISubject"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#ClinicalCare -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#ClinicalCare">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Purpose"/>
+        <rdfs:comment xml:lang="en">Refers to use of AI for identification of risk patients, aid in treatment decisions, triage.</rdfs:comment>
+        <rdfs:label xml:lang="en">Clinical Care</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#ComputerVision -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#ComputerVision">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AITechnique"/>
+        <rdfs:comment xml:lang="en">Refers to acquiring, processing, and interpreting visual data.</rdfs:comment>
+        <rdfs:label xml:lang="en">Computer Vision</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#DataDe-identification -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#DataDe-identification">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Risk"/>
+        <rdfs:label xml:lang="en">Data De-identification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#DataSubject -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#DataSubject">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AISubject"/>
+        <rdfs:label xml:lang="en">Data Subject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#DeepLearning -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#DeepLearning">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRhealth#MachineLearning"/>
+        <rdfs:comment xml:lang="en">An approach to creating rich hierarchical representations through the training of neural networks with many hidden layers.</rdfs:comment>
+        <rdfs:label xml:lang="en">Deep Learning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#DeviceMalfunctioning -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#DeviceMalfunctioning">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRhealth#Hardware-RelatedRiskSource"/>
+        <rdfs:label xml:lang="en">Device Malfuctioning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#Diagnosis -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#Diagnosis">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Purpose"/>
+        <rdfs:comment xml:lang="en">Refers to use of AI systems for classification and identification of symptoms, anticipation of symptoms.</rdfs:comment>
+        <rdfs:label xml:lang="en">Diagnosis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#DiseasePrevention -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#DiseasePrevention">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Purpose"/>
+        <rdfs:comment xml:lang="en">Refers to use of AI for identification of public health risks.</rdfs:comment>
+        <rdfs:label xml:lang="en">Disease Prevention</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#DrugDevelopment -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#DrugDevelopment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Purpose"/>
+        <rdfs:label xml:lang="en">Drug Development</rdfs:label>
+        <rdfs:label xml:lang="en">Refers to use od AI for simplified or accelerated development of medications.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#Employee -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#Employee">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AISubject"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#ExclusionOfPatients -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#ExclusionOfPatients">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRhealth#UnequalAccessToHealthcare"/>
+        <rdfs:label xml:lang="en">Exclusion Of Patients</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#FacialRecognition -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#FacialRecognition">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRhealth#AICapability"/>
+        <rdfs:label xml:lang="en">Facial Recognition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#FeelingOfConstantSurveillance -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#FeelingOfConstantSurveillance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#PsychologicalHarm"/>
+        <rdfs:label xml:lang="en">Feeling Of Constant Surveillance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#FinancialStatus -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#FinancialStatus">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AreaOfImpact"/>
+        <rdfs:label xml:lang="en">Financial Status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#FundamentalRightsInfringement -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#FundamentalRightsInfringement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Impact"/>
+        <rdfs:label xml:lang="en">Fundamental Rights Infringement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#GenderBias -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#GenderBias">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRhealth#Bias"/>
+        <rdfs:label xml:lang="en">Gender Bias</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#GovernmentAgency -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#GovernmentAgency">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AIProvider"/>
+        <rdfs:comment xml:lang="en">Indicates agencies linked to ministeries, municipalities, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Government Agency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#Hardware-RelatedRiskSource -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#Hardware-RelatedRiskSource">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#RiskSource"/>
+        <rdfs:label xml:lang="en">Hardware-Related Risk Source</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#HardwareMalfunctioning -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#HardwareMalfunctioning">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Risk"/>
+        <rdfs:label xml:lang="en">Hardware Malfunctioning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#HealthCareProvider -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#HealthCareProvider">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AIUser"/>
+        <rdfs:label xml:lang="en">Health Care Provider</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#HealthProfessional -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#HealthProfessional">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AISubject"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRhealth#HealthCareProvider"/>
+        <rdfs:label xml:lang="en">Health Professional</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#HealthPromotion -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#HealthPromotion">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Purpose"/>
+        <rdfs:comment xml:lang="en">Refers to use of AI for identification of risk populations to target with public health measures, e.g. information campaigns and behavior change.</rdfs:comment>
+        <rdfs:label xml:lang="en">Health Promotion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#HealthResearch -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#HealthResearch">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Purpose"/>
+        <rdfs:comment xml:lang="en">Refers to health research using data from electronic health records.</rdfs:comment>
+        <rdfs:label xml:lang="en">Health Research</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#HealthSystemManagementAndPlanning -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#HealthSystemManagementAndPlanning">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Purpose"/>
+        <rdfs:comment xml:lang="en">Refers to use of AI for resource allocation, optimization of processes, support for decision-making, scheduling, and identification of staffing requirements.</rdfs:comment>
+        <rdfs:label xml:lang="en">Health System Management And Planning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#Hemorrhage -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#Hemorrhage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Injury"/>
+        <rdfs:label xml:lang="en">Hemorrhage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#Hospital -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#Hospital">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRhealth#HealthCareProvider"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#InaccurateOutcome -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#InaccurateOutcome">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Consequence"/>
+        <rdfs:label xml:lang="en">Inaccurate Outcome</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#IncreasedAnxietyLevel -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#IncreasedAnxietyLevel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#PsychologicalHarm"/>
+        <rdfs:label xml:lang="en">Increased Anxiety Level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#IndividualUser -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#IndividualUser">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AISubject"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AIUser"/>
+        <rdfs:comment xml:lang="en">Indicates individual users of the AI systems such as  consumers, patients, and citizens.</rdfs:comment>
+        <rdfs:label xml:lang="en">Individual User</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#InsufficientTrainingData -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#InsufficientTrainingData">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#DataSet-RelatedRiskSource"/>
+        <rdfs:label xml:lang="en">Insufficient Training Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#Justice -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#Justice">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AreaOfImpact"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#LowAccuracy -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#LowAccuracy">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Risk"/>
+        <rdfs:label xml:lang="en">Low Accuracy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#MachineLearning -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#MachineLearning">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AITechnique"/>
+        <rdfs:comment xml:lang="en">A process by which a functional unit improves its performance by acquiring new knowledge or skills or by reorganizing existing knowledge or skills.</rdfs:comment>
+        <rdfs:label xml:lang="en">Machine Learnning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#MedicalClinic -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#MedicalClinic">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRhealth#HealthCareProvider"/>
+        <rdfs:label xml:lang="en">Medical Clinic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#MedicalStudent -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#MedicalStudent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRhealth#HealthProfessional"/>
+        <rdfs:label xml:lang="en">Medical Student</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#Minor -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#Minor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AISubject"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#Misdiagnosis -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#Misdiagnosis">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRhealth#InaccurateOutcome"/>
+        <rdfs:label xml:lang="en">Misdiagnosis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#MismanagementOfHealthResources -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#MismanagementOfHealthResources">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Consequence"/>
+        <rdfs:label xml:lang="en">Mismanagement Of Health Resources</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#NaturalLanguageProcessing -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#NaturalLanguageProcessing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AITechnique"/>
+        <rdfs:comment xml:lang="en">Refers to information processing based upon natural-language understanding and natural language generation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Natural Language Processing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#NotAnonymisingSensitiveData -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#NotAnonymisingSensitiveData">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRhealth#SensitiveData-RelatedRiskSource"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#Nurse -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#Nurse">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRhealth#HealthProfessional"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#OutbreakResponse -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#OutbreakResponse">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Purpose"/>
+        <rdfs:comment xml:lang="en">Refers to use of AI for transmission tracking, detection of outbreaks, and enforcement of restriction measures.</rdfs:comment>
+        <rdfs:label xml:lang="en">Outbreak Response</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#Overdiagnosis -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#Overdiagnosis">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRhealth#InaccurateOutcome"/>
+        <rdfs:label xml:lang="en">Overdiagnosis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#Patient -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#Patient">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AISubject"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AIUser"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#Physician -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#Physician">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRhealth#HealthProfessional"/>
+        <rdfs:label xml:lang="en">Physician</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#PrivacyViolation -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#PrivacyViolation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Consequence"/>
+        <rdfs:label xml:lang="en">Privacy Violation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#PrivateCompany -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#PrivateCompany">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AIProvider"/>
+        <rdfs:label xml:lang="en">Indicates a private company who develop or deploy the AI system for financial profit.</rdfs:label>
+        <rdfs:label xml:lang="en">Private Company</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#PublicHealth -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#PublicHealth">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AreaOfImpact"/>
+        <rdfs:label xml:lang="en">Public Health</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#PublicHealthOrganisation -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#PublicHealthOrganisation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AIUser"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRhealth#PublicOrganisation"/>
+        <rdfs:label xml:lang="en">Public Health Organisation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#PublicOrganisation -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#PublicOrganisation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AIProvider"/>
+        <rdfs:comment xml:lang="en">Indicates public health organisations such as public health agencies, Public bodies, and associations.</rdfs:comment>
+        <rdfs:label xml:lang="en">Public Organisation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#RacialBias -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#RacialBias">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRhealth#Bias"/>
+        <rdfs:label xml:lang="en">Racial Bias</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#ResearchFacility -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#ResearchFacility">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AIProvider"/>
+        <rdfs:comment xml:lang="en">Indicates educational and research facilities such as universities, research insitutes, whether they are private or public.</rdfs:comment>
+        <rdfs:label xml:lang="en">Research Facility</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#Right -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#Right">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AreaOfImpact"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#RightToDataProtection -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#RightToDataProtection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRhealth#Right"/>
+        <rdfs:label xml:lang="en">Right To Data Protection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#RightToNon-Discrimination -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#RightToNon-Discrimination">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRhealth#Right"/>
+        <rdfs:label xml:lang="en">Right To Non-Discrimination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#Robotics -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#Robotics">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AITechnique"/>
+        <rdfs:comment xml:lang="en">Robotics</rdfs:comment>
+        <rdfs:comment xml:lang="en">Science and practice of designing, manufacturing, and applying robots.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#Security -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#Security">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRhealth#Well-Being"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#SensitiveData-RelatedRiskSource -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#SensitiveData-RelatedRiskSource">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#DataSet-RelatedRiskSource"/>
+        <rdfs:label xml:lang="en">Sensitive Data-Related Risk Source</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#SensitiveDataExposure -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#SensitiveDataExposure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Risk"/>
+        <rdfs:label xml:lang="en">Sensitive Data Exposure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#SurgeryComplication -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#SurgeryComplication">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Consequence"/>
+        <rdfs:label xml:lang="en">Surgery Complication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#TechnicalFailure -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#TechnicalFailure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRhealth#Hardware-RelatedRiskSource"/>
+        <rdfs:label xml:lang="en">Technical Failure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#TextAnalysis -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#TextAnalysis">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRhealth#AICapability"/>
+        <rdfs:label xml:lang="en">Text Analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#UnequalAccessToHealthcare -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#UnequalAccessToHealthcare">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Impact"/>
+        <rdfs:label xml:lang="en">Unequal Access To Healthcare</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#UnequalDistributionOfHealthResources -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#UnequalDistributionOfHealthResources">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Impact"/>
+        <rdfs:label xml:lang="en">Unequal Distribution Of Health Resources</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#UnfairOutcome -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#UnfairOutcome">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Consequence"/>
+        <rdfs:label xml:lang="en">Unfair Outcome</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#UnlawfulUseOfSensitiveData -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#UnlawfulUseOfSensitiveData">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Risk"/>
+        <rdfs:label xml:lang="en">Unlawful Use of Sensitive Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#UseOfWrongFeatures -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#UseOfWrongFeatures">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRhealth#Algorithm-RelatedRiskSource"/>
+        <rdfs:label xml:lang="en">Use Of Wrong Features</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#VoiceRecognition -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#VoiceRecognition">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRhealth#AICapability"/>
+        <rdfs:label xml:lang="en">Voice Recognition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#Well-Being -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#Well-Being">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AreaOfImpact"/>
+        <rdfs:label xml:lang="en">Well-Being</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#Woman -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#Woman">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AISubject"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRhealth#WorkplaceWell-being -->
+
+    <owl:Class rdf:about="https://w3id.org/AIRhealth#WorkplaceWell-being">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Purpose"/>
+        <rdfs:comment xml:lang="en">Refers to the use of AI for promotion of well-being at the workplace.</rdfs:comment>
+        <rdfs:label xml:lang="en">Workplace Well-being</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
